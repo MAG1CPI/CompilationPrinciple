@@ -1,0 +1,10 @@
+                 U _GLOBAL_OFFSET_TABLE_
+                 U __isoc99_scanf
+                 U __stack_chk_fail
+0000000000000000 T main
+                 U printf
+                 U puts
+0000000000000008 C s
+0000000000000004 C score1
+0000000000000004 C score2
+0000000000000127 T sort
