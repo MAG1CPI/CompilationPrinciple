@@ -1,0 +1,113 @@
+     token              lexeme    lineno    offset                       address
+       INT                 int         1         0                                        
+        ID                   a         1         4                     S0_a_addr   declare
+     COMMA                   ,         1         5                                        
+        ID                   b         1         6                     S0_b_addr   declare
+     COMMA                   ,         1         7                                        
+        ID                   c         1         8                     S0_c_addr   declare
+     COMMA                   ,         1         9                                        
+        ID                   d         1        10                     S0_d_addr   declare
+      SEMI                   ;         1        11                                        
+       INT                 int         4         0                                        
+        ID                   f         4         4                     S0_f_addr   declare
+   L_PAREN                   )         4         5                                        
+       INT                 int         4         6                                        
+        ID                   a         4        10                     S1_a_addr    fparam
+   R_PAREN                   )         4        11                                        
+   L_BRACE                   {         4        12                                        
+       INT                 int         5         4                                        
+        ID                   c         5         8                     S1_c_addr   declare
+    ASSGIN                   =         5         9                                        
+        ID                   a         5        10                     S1_a_addr       use
+      SEMI                   ;         5        11                                        
+    RETURN              return         6         4                                        
+        ID                   c         6        11                     S1_c_addr       use
+      SEMI                   ;         6        12                                        
+   R_BRACE                   }         7         0                                        
+       INT                 int         8         0                                        
+        ID                   s         8         4                     S0_s_addr   declare
+  L_SQUARE                   [         8         5                                        
+   INT_NUM                   2         8         6                                        
+  R_SQUARE                   ]         8         7                                        
+  L_SQUARE                   [         8         8                                        
+   INT_NUM                   2         8         9                                        
+  R_SQUARE                   ]         8        10                                        
+    ASSGIN                   =         8        11                                        
+   L_BRACE                   {         8        12                                        
+        ID                   a         8        13                     S0_a_addr       use
+     COMMA                   ,         8        14                                        
+        ID                   b         8        15                     S0_b_addr       use
+     COMMA                   ,         8        16                                        
+   L_BRACE                   {         8        17                                        
+        ID                   f         8        18                     S0_f_addr       use
+   L_PAREN                   )         8        19                                        
+        ID                   c         8        20                     S0_c_addr       use
+   R_PAREN                   )         8        21                                        
+     COMMA                   ,         8        22                                        
+        ID                   f         8        23                     S0_f_addr       use
+   L_PAREN                   )         8        24                                        
+        ID                   f         8        25                     S0_f_addr       use
+   L_PAREN                   )         8        26                                        
+        ID                   d         8        27                     S0_d_addr       use
+   R_PAREN                   )         8        28                                        
+   R_PAREN                   )         8        29                                        
+   R_BRACE                   }         8        30                                        
+   R_BRACE                   }         8        31                                        
+     COMMA                   ,         8        32                                        
+        ID                   t         8        33                     S0_t_addr   declare
+    ASSGIN                   =         8        34                                        
+        ID                   f         8        35                     S0_f_addr       use
+   L_PAREN                   )         8        36                                        
+        ID                   b         8        37                     S0_b_addr       use
+   R_PAREN                   )         8        38                                        
+     COMMA                   ,         8        39                                        
+        ID                   u         8        40                     S0_u_addr   declare
+    ASSGIN                   =         8        41                                        
+        ID                   f         8        42                     S0_f_addr       use
+   L_PAREN                   )         8        43                                        
+        ID                   a         8        44                     S0_a_addr       use
+   R_PAREN                   )         8        45                                        
+     COMMA                   ,         8        46                                        
+        ID                   v         8        47                     S0_v_addr   declare
+    ASSGIN                   =         8        48                                        
+        ID                   a         8        49                     S0_a_addr       use
+      SEMI                   ;         8        50                                        
+       INT                 int         9         0                                        
+        ID                main         9         4                  S0_main_addr   declare
+   L_PAREN                   )         9         8                                        
+   R_PAREN                   )         9         9                                        
+   L_BRACE                   {        10         0                                        
+       INT                 int        11         4                                        
+        ID                   a        11         8                     S4_a_addr   declare
+      SEMI                   ;        11         9                                        
+        ID                   a        12         4                     S4_a_addr       use
+    ASSGIN                   =        12         6                                        
+   INT_NUM                 172        12         8                                        
+      SEMI                   ;        12        16                                        
+       INT                 int        13         4                                        
+        ID                   b        13         8                     S4_b_addr   declare
+      SEMI                   ;        13         9                                        
+   L_BRACE                   {        14         4                                        
+       INT                 int        15         8                                        
+        ID                   b        15        12                     S5_b_addr   declare
+      SEMI                   ;        15        13                                        
+   R_BRACE                   }        16         4                                        
+   L_BRACE                   {        17         4                                        
+        ID                   b        18         8                     S4_b_addr       use
+    ASSGIN                   =        18         9                                        
+   INT_NUM                   3        18        10                                        
+      SEMI                   ;        18        11                                        
+   R_BRACE                   }        19         4                                        
+        IF                  if        20         4                                        
+   L_PAREN                   )        20         6                                        
+        ID                   a        20         7                     S4_a_addr       use
+         L                   <        20         9                                        
+   INT_NUM                   5        20        11                                        
+   R_PAREN                   )        20        12                                        
+    RETURN              return        21         8                                        
+   INT_NUM                   1        21        15                                        
+      SEMI                   ;        21        16                                        
+    RETURN              return        22         4                                        
+   INT_NUM                   0        22        11                                        
+      SEMI                   ;        22        12                                        
+   R_BRACE                   }        23         0                                        

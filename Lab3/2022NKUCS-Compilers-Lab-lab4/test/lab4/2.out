@@ -1,0 +1,80 @@
+     token              lexeme    lineno    offset                       address
+       INT                 int         3         0                                        
+        ID                   f         3         4                     S0_f_addr   declare
+   L_PAREN                   )         3         5                                        
+   R_PAREN                   )         3         6                                        
+   L_BRACE                   {         3         7                                        
+       INT                 int         4         1                                        
+        ID                   a         4         5                     S1_a_addr   declare
+      SEMI                   ;         4         6                                        
+        ID                   a         5         1                     S1_a_addr       use
+    ASSGIN                   =         5         3                                        
+   INT_NUM                   0         5         5                                        
+      SEMI                   ;         5         6                                        
+     WHILE               while         6         1                                        
+   L_PAREN                   )         6         6                                        
+        ID                   a         6         7                     S1_a_addr       use
+         L                   <         6         8                                        
+   INT_NUM                  10         6         9                                        
+   R_PAREN                   )         6        11                                        
+   L_BRACE                   {         6        12                                        
+        ID                   a         7         2                     S1_a_addr       use
+    ASSGIN                   =         7         4                                        
+        ID                   a         7         6                     S1_a_addr       use
+       MUL                   *         7         8                                        
+   INT_NUM                2345         7        10                                        
+      SEMI                   ;         7        14                                        
+   R_BRACE                   }         8         1                                        
+    RETURN              return         9         1                                        
+        ID                   a         9         8                     S1_a_addr       use
+      SEMI                   ;         9         9                                        
+   R_BRACE                   }        10         0                                        
+       INT                 int        12         0                                        
+        ID                main        12         4                  S0_main_addr   declare
+   L_PAREN                   )        12         8                                        
+   R_PAREN                   )        12         9                                        
+   L_BRACE                   {        12        10                                        
+       INT                 int        13         1                                        
+        ID             _testid        13         5               S3__testid_addr   declare
+      SEMI                   ;        13        12                                        
+        ID             _testid        14         1               S3__testid_addr       use
+    ASSGIN                   =        14         9                                        
+   INT_NUM                   0        14        11                                        
+      SEMI                   ;        14        12                                        
+        IF                  if        15         1                                        
+   L_PAREN                   )        15         3                                        
+        ID             _testid        15         4               S3__testid_addr       use
+        EQ                  ==        15        11                                        
+   INT_NUM                   0        15        13                                        
+   R_PAREN                   )        15        14                                        
+   L_BRACE                   {        15        15                                        
+       INT                 int        16         2                                        
+        ID             _testid        16         6               S4__testid_addr   declare
+      SEMI                   ;        16        13                                        
+       INT                 int        17         2                                        
+        ID            _testid2        17         6              S4__testid2_addr   declare
+      SEMI                   ;        17        14                                        
+        ID            _testid1        18         2                    undefined!          
+    ASSGIN                   =        18        10                                        
+        ID            _testid1        18        11              S4__testid1_addr       use
+       ADD                   +        18        19                                        
+   INT_NUM                   1        18        20                                        
+      SEMI                   ;        18        21                                        
+   R_BRACE                   }        19         1                                        
+   L_BRACE                   {        23         1                                        
+       INT                 int        24         2                                        
+        ID                   a        24         6                     S5_a_addr   declare
+      SEMI                   ;        24         7                                        
+   R_BRACE                   }        25         1                                        
+   L_BRACE                   {        26         1                                        
+       INT                 int        27         2                                        
+        ID                   a        27         6                     S6_a_addr   declare
+      SEMI                   ;        27         7                                        
+   R_BRACE                   }        28         1                                        
+       INT                 int        29         1                                        
+        ID                   b        29         5                     S3_b_addr   declare
+      SEMI                   ;        29         6                                        
+    RETURN              return        30         1                                        
+   INT_NUM                   0        30         8                                        
+      SEMI                   ;        30         9                                        
+   R_BRACE                   }        31         0                                        
