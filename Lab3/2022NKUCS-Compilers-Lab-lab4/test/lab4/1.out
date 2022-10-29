@@ -3,11 +3,17 @@
         ID                   a         1         4                     S0_a_addr   declare
      COMMA                   ,         1         5                                        
         ID                   b         1         6                     S0_b_addr   declare
-     COMMA                   ,         1         7                                        
-        ID                   c         1         8                     S0_c_addr   declare
-     COMMA                   ,         1         9                                        
-        ID                   d         1        10                     S0_d_addr   declare
-      SEMI                   ;         1        11                                        
+    ASSGIN                   =         1         7                                        
+ FLOAT_NUM            5.000000         1         8                                        
+     COMMA                   ,         1        10                                        
+        ID                   c         1        11                     S0_c_addr   declare
+    ASSGIN                   =         1        12                                        
+ FLOAT_NUM            0.900000         1        13                                        
+     COMMA                   ,         1        15                                        
+        ID                   d         1        16                     S0_d_addr   declare
+    ASSGIN                   =         1        17                                        
+ FLOAT_NUM           40.000000         1        18                                        
+      SEMI                   ;         1        22                                        
        INT                 int         4         0                                        
         ID                   f         4         4                     S0_f_addr   declare
    L_PAREN                   )         4         5                                        

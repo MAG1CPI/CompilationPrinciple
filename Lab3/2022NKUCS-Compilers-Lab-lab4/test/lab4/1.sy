@@ -1,4 +1,4 @@
-int a,b,c,d;
+int a,b=5.,c=.9,d=.4e2;
 /*abc*/
 //
 int f(int a){
