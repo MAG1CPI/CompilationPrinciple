@@ -1,0 +1,102 @@
+program
+    DeclStmt
+        Id	name: a	scope: 0	type: int
+    FunctionDefine function name: compare, type: int(int, int)
+        FuncFParam
+            Id	name: x	scope: 1	type: int
+        FuncFParam
+            Id	name: y	scope: 1	type: int
+        CompoundStmt
+            IfStmt
+                BinaryExpr	op: greater
+                    Id	name: x	scope: 1	type: int
+                    Id	name: y	scope: 1	type: int
+                ReturnStmt
+                    Id	name: x	scope: 1	type: int
+            ReturnStmt
+                Id	name: y	scope: 1	type: int
+    FunctionDefine function name: test, type: void(int, int, int)
+        FuncFParam
+            Id	name: x	scope: 1	type: int
+        FuncFParam
+            Id	name: y	scope: 1	type: int
+        FuncFParam
+            Id	name: z	scope: 1	type: int
+        CompoundStmt
+            ReturnStmt
+    FunctionDefine function name: main, type: int()
+        CompoundStmt
+            DeclStmt
+                Id	name: a	scope: 2	type: int
+            NullStmt
+            NullStmt
+            AssignStmt
+                Id	name: a	scope: 2	type: int
+                BinaryExpr	op: add
+                    IntegerLiteral	value: 1	type: int
+                    BinaryExpr	op: mul
+                        IntegerLiteral	value: 2	type: int
+                        IntegerLiteral	value: 3	type: int
+            IfStmt
+                BinaryExpr	op: less
+                    Id	name: a	scope: 2	type: int
+                    IntegerLiteral	value: 5	type: int
+                ReturnStmt
+                    IntegerLiteral	value: 1	type: int
+            IfElseStmt
+                BinaryExpr	op: equal
+                    Id	name: a	scope: 2	type: int
+                    IntegerLiteral	value: 1	type: int
+                CompoundStmt
+                    DeclStmt
+                        Id	name: x	scope: 3	type: int
+                        IntegerLiteral	value: 1	type: int
+                CompoundStmt
+                    DeclStmt
+                        Id	name: y	scope: 3	type: int
+                        IntegerLiteral	value: 1	type: int
+            WhileStmt
+                BinaryExpr	op: greater
+                    Id	name: a	scope: 2	type: int
+                    IntegerLiteral	value: 3	type: int
+                CompoundStmt
+                    AssignStmt
+                        Id	name: a	scope: 2	type: int
+                        BinaryExpr	op: add
+                            Id	name: a	scope: 2	type: int
+                            IntegerLiteral	value: 1	type: int
+                    DeclStmt
+                        Id	name: c	scope: 3	type: int
+                        IntegerLiteral	value: 99	type: int
+                    ReturnStmt
+                        IntegerLiteral	value: 0	type: int
+            DeclStmt
+                Id	name: b	scope: 2	type: int
+                IntegerLiteral	value: 3	type: int
+            DeclStmt
+                Id	name: c	scope: 2	type: int
+            DeclStmt
+                Id	name: d	scope: 2	type: int
+            DeclStmt
+                Id	name: e	scope: 2	type: int
+            DeclStmt
+                Id	name: f	scope: 2	type: int
+            DeclStmt
+                Id	name: g	scope: 2	type: const int
+                IntegerLiteral	value: 7	type: int
+            DeclStmt
+                Id	name: h	scope: 2	type: const int
+                IntegerLiteral	value: 9	type: int
+            DeclStmt
+                Id	name: i	scope: 2	type: const int
+                IntegerLiteral	value: 11	type: int
+            DeclStmt
+                Id	name: z	scope: 2	type: int
+                FunctionCall function name: compare, type: int(int, int)
+                    Id	name: a	scope: 2	type: int
+                    Id	name: b	scope: 2	type: int
+            ExprStmt
+                FunctionCall function name: putint, type: void(int)
+                    Id	name: a	scope: 2	type: int
+            ReturnStmt
+                IntegerLiteral	value: 0	type: int

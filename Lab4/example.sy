@@ -1,0 +1,42 @@
+int a;
+
+int compare(int x, int y)
+{
+    if(x > y)
+        return x;
+    return y;
+}
+
+void test(int x, int y, int z)
+{
+    return;
+}
+
+int main()
+{
+    int a;
+    ;
+    ;
+    a = 1 + 2 * 3;
+    if(a < 5)
+        return 1;
+    if(a == 1)
+    {
+        int x = 1;
+    }
+    else
+    {
+        int y = 1;
+    }
+    while(a > 3)
+    {
+        a = a + 1;
+        int c = 99;
+        return 0;
+    }
+    int b = 3, c, d, e, f;
+    const int g = 7, h = 9, i = 11;
+    int z = compare(a, b);
+    putint(a);
+    return 0;
+}
