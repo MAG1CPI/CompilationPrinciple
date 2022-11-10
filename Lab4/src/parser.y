@@ -9,7 +9,7 @@
     Type* decl_type;
     const bool current_symtab = true;
     const bool all_parent_symtab = false;
-    std::vector<Type*>* func_fparam_type;
+    std::vector<Type*> func_fparam_type;
 }
 
 %code requires {
@@ -322,20 +322,21 @@ FuncDef
     ;
 */
 FuncDef
-    : Type ID                                   {   Type *funcType;
-                                                    funcType = new FunctionType($1, {});
-                                                    func_fparam_type = dynamic_cast<FunctionType *>(funcType)->GetFparamTypePointer();
-                                                    SymbolEntry *se = new IdentifierSymbolEntry(funcType, $2, identifiers->getLevel());
-                                                    identifiers->install($2, se);
-                                                    identifiers = new SymbolTable(identifiers); }
-    L_PAREN FuncFParams R_PAREN BlockStmt       {   SymbolEntry *se;
-                                                    se = identifiers->lookup($2, all_parent_symtab);
-                                                    assert(se != nullptr);
-                                                    $$ = new FunctionDef(se, $5, $7);
-                                                    SymbolTable *top = identifiers;
-                                                    identifiers = identifiers->getPrev();
-                                                    delete top;
-                                                    delete []$2; }
+    : Type ID                                       {   identifiers = new SymbolTable(identifiers); }
+    L_PAREN FuncFParams R_PAREN                     {   Type *funcType;
+                                                        std::vector<Type*> paramstype;
+                                                        paramstype.swap(func_fparam_type);
+                                                        funcType = new FunctionType($1, paramstype);
+                                                        SymbolEntry *se = new IdentifierSymbolEntry(funcType, $2, identifiers->getPrev()->getLevel());
+                                                        identifiers->getPrev()->install($2, se); }
+    BlockStmt                                       {   SymbolEntry *se;
+                                                        se = identifiers->lookup($2, all_parent_symtab);
+                                                        assert(se != nullptr);
+                                                        $$ = new FunctionDef(se, $5, $8);
+                                                        SymbolTable *top = identifiers;
+                                                        identifiers = identifiers->getPrev();
+                                                        delete top;
+                                                        delete []$2; }
     ;
 FuncFParams
     : FuncFParam                                {   $$ = $1; }
@@ -358,7 +359,7 @@ FuncFParam
                                                     se = new IdentifierSymbolEntry($1, $2, identifiers->getLevel());
                                                     identifiers->install($2, se);
                                                     $$ = new FuncFParam(new Id(se));
-                                                    func_fparam_type->push_back($1);
+                                                    func_fparam_type.push_back($1);
                                                     delete []$2; }
     ;
 %%
